@@ -2,7 +2,7 @@ const delimiterCodes = [254, 253, 252, 251, 250];
 const delimiters = delimiterCodes.map(d => String.fromCharCode(d));
 
 function ArrayToMV(arr, depth = 0) {
-    if (!Array.isArray(arr) || depth > 5) return arr;
+    if (!Array.isArray(arr) || depth >= 5) return arr;
     let delim = delimiters[depth];
     return arr.map(a => ArrayToMV(a, depth+1)).join(delim);
 }
