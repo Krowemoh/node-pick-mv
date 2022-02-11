@@ -1,0 +1,7 @@
+node_modules/
+sessions
+.env
+dist/
+test/
+test.js
+test.txt
