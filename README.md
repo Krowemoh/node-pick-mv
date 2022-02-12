@@ -7,11 +7,16 @@ The code is in the src directory, index is just a testing page.
 You can also use these functions to work with multivalue in the same way as in BASIC with positional arguments and indexing that starts at 1.
 
 There are examples in the examples directory of these functions.
+## Installation
+
+```
+> npm install pick-mv
+```
 
 ### Convert multivalue to an array:
 
 ```
-const mv = require("./src/mv");
+const mv = require("pick-mv");
 
 const str = "1þ3ý4ý6ü7û8";
 const array = mv.MVToArray(str);
@@ -26,7 +31,7 @@ console.log("Array: ", array);
 ### Convert an array to multivalue:
 
 ```
-const mv = require("./src/mv");
+const mv = require("pick-mv");
 
 const array = [1, [1,2]];
 
@@ -40,7 +45,7 @@ console.log("String: " +  mv.ArrayToMV(array));
 ### Work with arrays BASIC Style:
 
 ```
-const mv = require("./src/mv");
+const mv = require("pick-mv");
 
 let a = mv.MVMatrix();
 
