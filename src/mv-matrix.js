@@ -57,7 +57,6 @@ function MVMatrix(array = []) {
             }
         },
     };
-
     return new Proxy(array, handler);
 }
 

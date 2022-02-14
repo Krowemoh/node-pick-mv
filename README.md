@@ -44,6 +44,8 @@ console.log("String: " +  mv.ArrayToMV(array));
 
 ### Work with arrays BASIC Style:
 
+Building a new array:
+
 ```
 const mv = require("pick-mv");
 
@@ -70,3 +72,14 @@ console.log("Value at (2,3,1): ", a[[2,3,1]]);
 ```
 
 MVString is really just a shortcut to doing Test 2, source is the original array that exists and this is what you can use if you need access to functions like map.
+
+Working with an existing array:
+
+```
+const mv = require("pick-mv");
+
+const array = mv.MVToArray("1þ3ý4ý6ü7û8"); 
+const a = mv.MVMatrix(array);
+
+console.log("Value at (2,3,1): ", a[[2,3,1]]);
+```

@@ -1,4 +1,4 @@
-const mv = require("../src/mv");
+const mv = require("../index");
 
 const str = "1þ3ý4ý6ü7û8";
 const array = mv.MVToArray(str);

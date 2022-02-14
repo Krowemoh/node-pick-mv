@@ -1,4 +1,4 @@
-const mv = require("./src/mv");
+const mv = require("../index");
 
 let a = mv.MVMatrix();
 
