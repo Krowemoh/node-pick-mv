@@ -1,6 +1,10 @@
 const mvConverter = require("./mv-converter");
 
 function MVMatrix(array = []) {
+    if (typeof array === "string" || array instanceof String) {
+        array = mvConverter.MVToArray(array);
+    }
+
     const handler = {
         get(target, keys, receiver) {
             if(isNaN(parseInt(keys))) {
@@ -20,6 +24,7 @@ function MVMatrix(array = []) {
             }
             return value;
         },
+
         set(target, keys, value) {
             const indicies = keys.split(",").map(n => parseInt(n));
             const p = indicies.map(i => i-1);
@@ -57,6 +62,7 @@ function MVMatrix(array = []) {
             }
         },
     };
+
     return new Proxy(array, handler);
 }
 
