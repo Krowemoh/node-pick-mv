@@ -1,4 +1,4 @@
-# node-pick-mv
+# pick-mv
 
 This is a set of helper functions to work with multivalue in javascript. The core of these functions is the ability to convert arrays to multivalue and multivalue to arrays.
 
