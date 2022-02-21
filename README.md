@@ -73,10 +73,14 @@ console.log("Value at (2,3,1): ", a[[2,3,1]]);
 
 MVString is really just a shortcut to doing Test 2, source is the original array that exists and this is what you can use if you need access to functions like map.
 
-Working with an existing array:
+MVMatrix can take both an array and a string.
 
 ```
 const mv = require("pick-mv");
+
+const str = "1þ3ý4ý6ü7û8";
+const s = mv.MVMatrix(str);
+console.log("Value at (2,3,1): ", s[[2,3,1]]);
 
 const array = mv.MVToArray("1þ3ý4ý6ü7û8"); 
 const a = mv.MVMatrix(array);
