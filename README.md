@@ -7,6 +7,7 @@ The code is in the src directory, index is just a testing page.
 You can also use these functions to work with multivalue in the same way as in BASIC with positional arguments and indexing that starts at 1.
 
 There are examples in the examples directory of these functions.
+
 ## Installation
 
 ```
@@ -87,3 +88,7 @@ const a = mv.MVMatrix(array);
 
 console.log("Value at (2,3,1): ", a[[2,3,1]]);
 ```
+
+## Changelog
+
+1.2.0 - Check if the value being referenced by the index is a string before returning an index, if it is a string, then return the entire thing regardless of the index.
