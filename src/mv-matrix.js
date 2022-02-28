@@ -20,7 +20,11 @@ function MVMatrix(array = []) {
             let value = target.slice(0);
             for (const pos of indicies) {
                 if (pos > value.length) return '';
-                value = value[pos-1];
+                if (typeof value === "string" || value instanceof String) {
+                    value = value;
+                } else {
+                    value = value[pos-1];
+                }
             }
             return value;
         },
